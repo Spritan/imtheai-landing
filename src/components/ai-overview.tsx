@@ -35,17 +35,17 @@ export default function AIGeneratorLanding() {
           {" "}
           ,
           <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-4xl md:text-5xl lg:text-6xl">
-            See yourself{" "}
-            <span className="bg-slate-600 px-2 text-white">Redefined</span> By
-            AI
+            Your <span className="bg-green-500 px-2 text-white">Design</span>,
+            Our AI: Elevate Your Fashion Brand
           </h1>
           <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-            Capture your favorite memories with your own,{" "}
-            <span className="font-semibold">one-of-one</span> phone case.
+            Upload your designs and let our AI showcase them on custom virtual
+            models. Explore the future of fashion.{" "}
+            {/* <span className="font-semibold">one-of-one</span> phone case.
             CaseCobra allows you to protect your memories, not just your phone
-            case.
+            case. */}
           </p>
-          <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
+          {/* <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
             <div className="space-y-2">
               <li className="flex gap-1.5 items-center text-left">
                 <Check className="h-5 w-5 shrink-0 text-slate-600" />
@@ -60,10 +60,10 @@ export default function AIGeneratorLanding() {
                 Modern iPhone models supported
               </li>
             </div>
-          </ul>
+          </ul> */}
           <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5">
             <div className="flex -space-x-4">
-              <img
+              {/* <img
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
                 src="/users/user-1.png"
                 alt="user image"
@@ -87,21 +87,21 @@ export default function AIGeneratorLanding() {
                 className="inline-block object-cover h-10 w-10 rounded-full ring-2 ring-slate-100"
                 src="/users/user-5.jpg"
                 alt="user image"
-              />
+              /> */}
             </div>
 
             <div className="flex flex-col justify-between items-center sm:items-start">
-              <div className="flex gap-0.5">
+              {/* <div className="flex gap-0.5">
                 <Star className="h-4 w-4 text-slate-600 fill-slate-600" />
                 <Star className="h-4 w-4 text-slate-600 fill-slate-600" />
                 <Star className="h-4 w-4 text-slate-600 fill-slate-600" />
                 <Star className="h-4 w-4 text-slate-600 fill-slate-600" />
                 <Star className="h-4 w-4 text-slate-600 fill-slate-600" />
-              </div>
+              </div> */}
 
-              <p>
+              {/* <p>
                 <span className="font-semibold">1.250</span> happy users
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ export default function AIGeneratorLanding() {
                             "cursor-pointer flex flex-col items-center flex-1 rounded-lg p-1 transition-all ",
                             selectedDress === dress.id
                               ? " bg-red-500/25 backdrop-blur "
-                              : "hover:ring-2 hover:ring-slate-300",
+                              : "hover:ring-2 hover:ring-slate-300"
                           )}
                           onClick={() => setSelectedDress(dress.id)}
                         >
@@ -193,7 +193,7 @@ export default function AIGeneratorLanding() {
                             "cursor-pointer  transition-all flex flex-col items-center w-20 h-20 ring-offset-4",
                             selectedModel === model.id
                               ? "ring-2 ring-red-500 "
-                              : "hover:ring-2 hover:ring-slate-300",
+                              : "hover:ring-2 hover:ring-slate-300"
                           )}
                         >
                           <AvatarImage
@@ -217,4 +217,3 @@ export default function AIGeneratorLanding() {
     </>
   );
 }
-
