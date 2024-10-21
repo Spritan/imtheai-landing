@@ -53,7 +53,7 @@ const DesignSection = () => {
                 size: "lg",
                 className: "mx-auto mt-8",
               })}
-              href="/app.imthe.ai"
+              href="https://app.imthe.ai"
             >
               Try Demo <ArrowRight className="h-4 w-4 ml-1.5" />
             </Link>
