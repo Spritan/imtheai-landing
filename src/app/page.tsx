@@ -228,7 +228,7 @@ export default async function Home() {
       <div>
         <PricingPage />
       </div>
-      <section>
+      {/* <section>
         <MaxWidthWrapper className="py-24">
           <div className="mb-12 px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
@@ -291,7 +291,7 @@ export default async function Home() {
             </div>
           </ul>
         </MaxWidthWrapper>
-      </section>
+      </section> */}
     </div>
   );
 }
