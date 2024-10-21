@@ -103,17 +103,15 @@ export default function PricingPage() {
               />
               <button
                 onClick={() => setActiveService("virtualTryOn")}
-                className={`relative z-10 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full ${
-                  activeService === "virtualTryOn" ? "text-white" : "text-gray-700"
-                }`}
+                className={`relative z-10 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full ${activeService === "virtualTryOn" ? "text-white" : "text-gray-700"
+                  }`}
               >
                 Virtual Try-On
               </button>
               <button
                 onClick={() => setActiveService("aiPhotoshoot")}
-                className={`relative z-10 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full ${
-                  activeService === "aiPhotoshoot" ? "text-white" : "text-gray-700"
-                }`}
+                className={`relative z-10 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full ${activeService === "aiPhotoshoot" ? "text-white" : "text-gray-700"
+                  }`}
               >
                 AI Photoshoot
               </button>
@@ -136,13 +134,13 @@ export default function PricingPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                <Card 
+                <Card
                   className={
-                    tier.name === "TerPrice" 
-                      ? "border-black shadow-lg relative overflow-hidden transform transition-all duration-300 hover:scale-105" 
-                      : index === 2 
-                        ? "border-gray-400 shadow-md transform transition-all duration-300 hover:scale-105" 
-                        : "transform transition-all duration-300 hover:scale-105"
+                    tier.name === "TerPrice"
+                      ? "h-full border-black shadow-lg relative overflow-hidden transform transition-all duration-300 hover:scale-105"
+                      : index === 2
+                        ? "h-full  border-gray-400 shadow-md transform transition-all duration-300 hover:scale-105"
+                        : "h-full  transform transition-all duration-300 hover:scale-105"
                   }
                 >
                   {tier.name === "TerPrice" && (
@@ -150,38 +148,46 @@ export default function PricingPage() {
                       Best Value
                     </div>
                   )}
-                  <CardHeader>
-                    <CardTitle>{tier.name}</CardTitle>
-                    <CardDescription>{tier.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-4xl font-bold">{tier.price}</div>
-                    <p className="text-sm text-gray-500">
-                      {tier.name !== "Enterprise" ? "per month" : "contact us"}
-                    </p>
-                    <ul className="mt-4 space-y-2">
-                      {tier.features.map((feature) => (
-                        <li key={feature} className="flex items-center">
-                          <Check className="w-5 h-5 mr-2 text-green-500" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <button 
-                      className={`w-full py-2 px-4 rounded-md transition-colors duration-200 ${
-                        tier.name === "TerPrice"
-                          ? "bg-black text-white hover:bg-gray-800"
-                          : tier.name === "Pro"
-                          ? "bg-gray-800 text-white hover:bg-gray-700"
-                          : "bg-white text-black border border-black hover:bg-gray-100"
-                      }`}
-                    >
-                      {tier.name === "Enterprise" ? "Contact Sales" : "Get Started"}
-                      {tier.name === "TerPrice" && <Zap className="w-4 h-4 ml-2 inline" />}
-                    </button>
-                  </CardFooter>
+                  <div className="flex justify-between flex-col h-full">
+                    <div>
+                      <CardHeader>
+                        <CardTitle>{tier.name}</CardTitle>
+                        <CardDescription>{tier.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-4xl font-bold">{tier.price}</div>
+                        <p className="text-sm text-gray-500">
+                          {tier.name !== "Enterprise" ? "per month" : "contact us"}
+                        </p>
+                        <ul className="mt-4 space-y-2">
+                          {tier.features.map((feature) => (
+                            <li key={feature} className="flex items-center">
+                              <Check className="w-5 h-5 mr-2 text-green-500" />
+                              <span className="text-sm">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </div>
+                    <div>
+                      <CardFooter>
+                        <button
+                          className={`w-full py-2 px-4 rounded-md transition-colors duration-200 ${tier.name === "TerPrice"
+                            ? "bg-black text-white hover:bg-gray-800"
+                            : tier.name === "Pro"
+                              ? "bg-gray-800 text-white hover:bg-gray-700"
+                              : "bg-white text-black border border-black hover:bg-gray-100"
+                            }`}
+                        >
+                          {tier.name === "Enterprise" ? "Contact Sales" : "Get Started"}
+                          {tier.name === "TerPrice" && <Zap className="w-4 h-4 ml-2 inline" />}
+                        </button>
+                      </CardFooter>
+                    </div>
+
+                  </div>
+
+
                 </Card>
               </motion.div>
             ))}
