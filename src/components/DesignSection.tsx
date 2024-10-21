@@ -4,8 +4,8 @@ const DesignSection = () => {
   return (
     <>
       <main className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-        <section className="py-16">
-          <div className=" px-4 text-center">
+        <section className="py-8 -mt-8">
+          <div className="px-4 text-center">
             <h1 className="tracking-tight font-bold text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
               Upload your{" "}
               <span className="bg-slate-600 px-2 text-white">Design</span>
