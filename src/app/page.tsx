@@ -33,9 +33,6 @@ export default async function Home() {
                 {/* <img src="/snake-1.png" className="w-full" /> */}
               </div>
 
-              <div>
-                <DesignSection />
-              </div>
 
               {/* <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
                 Capture your favorite memories with your own,{" "}
@@ -121,6 +118,10 @@ export default async function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
+        
+        <div>
+                <DesignSection />
+              </div>
       </section>
 
       {/* value proposition section */}
