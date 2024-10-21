@@ -35,7 +35,6 @@ export default function AIGeneratorLanding() {
       <div className="col-span-3">
         <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
           {" "}
-          ,
           <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-4xl md:text-5xl lg:text-6xl">
             Your <span className="bg-slate-600 px-2 text-white">Design</span>,
             Our AI: Elevate Your Fashion Brand
