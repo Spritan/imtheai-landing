@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 const models = [
   { id: "1", name: "Girl 1", avatar: "/model/model-1.png" },
@@ -35,7 +37,7 @@ export default function AIGeneratorLanding() {
           {" "}
           ,
           <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-4xl md:text-5xl lg:text-6xl">
-            Your <span className="bg-green-500 px-2 text-white">Design</span>,
+            Your <span className="bg-slate-600 px-2 text-white">Design</span>,
             Our AI: Elevate Your Fashion Brand
           </h1>
           <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
@@ -45,6 +47,17 @@ export default function AIGeneratorLanding() {
             CaseCobra allows you to protect your memories, not just your phone
             case. */}
           </p>
+          <div className="flex justify-center">
+            <Link
+              className={buttonVariants({
+                size: "lg",
+                className: "mx-auto mt-8",
+              })}
+              href="/app.imthe.ai"
+            >
+              Try Demo <ArrowRight className="h-4 w-4 ml-1.5" />
+            </Link>
+          </div>
           {/* <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
             <div className="space-y-2">
               <li className="flex gap-1.5 items-center text-left">

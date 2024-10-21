@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import AIGeneratorLanding from "@/components/ai-overview";
+import PricingPage from "@/components/app_pricing_page";
 import DesignSection from "@/components/DesignSection";
 import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
@@ -22,9 +23,8 @@ export default async function Home() {
           <AIGeneratorLanding />
         </MaxWidthWrapper>
       </section>
-
       <section>
-        <MaxWidthWrapper className="">
+        <MaxWidthWrapper>
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
@@ -122,11 +122,18 @@ export default async function Home() {
           <DesignSection />
         </div>
       </section>
-
       {/* value proposition section */}
+
+      <h1
+        className="tracking-tight font-bold text-center
+       text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-5xl leading-tight mt-32"
+      >
+        <span className="bg-slate-600 px-2 text-white">Gallery</span>
+      </h1>
+
       <section className="bg-slate-100 grainy-dark py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
-          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+          {/* <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
             <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">
               What our{" "}
               <span className="relative px-2">
@@ -136,18 +143,18 @@ export default async function Home() {
               say
             </h2>
             <img src="/snake-2.png" className="w-24 order-0 lg:order-2" />
-          </div>
+          </div> */}
 
           <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16">
             <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
-              <div className="flex gap-0.5 mb-2">
+              {/* <div className="flex gap-0.5 mb-2">
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
-              </div>
-              <div className="text-lg leading-8">
+              </div> */}
+              {/* <div className="text-lg leading-8">
                 <p>
                   "The case feels durable and I even got a compliment on the
                   design. Had the case for two and a half months now and{" "}
@@ -157,8 +164,8 @@ export default async function Home() {
                   , on the case I had before, the image started fading into
                   yellow-ish color after a couple weeks. Love it."
                 </p>
-              </div>
-              <div className="flex gap-4 mt-2">
+              </div> */}
+              {/* <div className="flex gap-4 mt-2">
                 <img
                   className="rounded-full h-12 w-12 object-cover"
                   src="/users/user-1.png"
@@ -171,19 +178,19 @@ export default async function Home() {
                     <p className="text-sm">Verified Purchase</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* second user review */}
             <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
-              <div className="flex gap-0.5 mb-2">
+              {/* <div className="flex gap-0.5 mb-2">
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
                 <Star className="h-5 w-5 text-slate-600 fill-slate-600" />
-              </div>
-              <div className="text-lg leading-8">
+              </div> */}
+              {/* <div className="text-lg leading-8">
                 <p>
                   "I usually keep my phone together with my keys in my pocket
                   and that led to some pretty heavy scratchmarks on all of my
@@ -194,8 +201,8 @@ export default async function Home() {
                   </span>
                   . I dig it."
                 </p>
-              </div>
-              <div className="flex gap-4 mt-2">
+              </div> */}
+              {/* <div className="flex gap-4 mt-2">
                 <img
                   className="rounded-full h-12 w-12 object-cover"
                   src="/users/user-4.jpg"
@@ -208,7 +215,7 @@ export default async function Home() {
                     <p className="text-sm">Verified Purchase</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </MaxWidthWrapper>
@@ -218,6 +225,9 @@ export default async function Home() {
         </div>
       </section>
 
+      <div>
+        <PricingPage />
+      </div>
       <section>
         <MaxWidthWrapper className="py-24">
           <div className="mb-12 px-6 lg:px-8">

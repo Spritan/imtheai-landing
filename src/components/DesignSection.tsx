@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const DesignSection = () => {
   return (
@@ -43,6 +46,17 @@ const DesignSection = () => {
               Instantly generate high-quality virtual try-ons with one click and
               experience your designs in real-time.
             </p>
+          </div>
+          <div className="flex justify-center">
+            <Link
+              className={buttonVariants({
+                size: "lg",
+                className: "mx-auto mt-8",
+              })}
+              href="/app.imthe.ai"
+            >
+              Try Demo <ArrowRight className="h-4 w-4 ml-1.5" />
+            </Link>
           </div>
         </section>
       </main>
