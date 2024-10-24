@@ -6,9 +6,9 @@ import { auth } from "@/auth";
 import { handleSignOut } from "@/app/auth/actions";
 
 const Navbar = async () => {
-  const session = await auth()
+  const session = await auth();
 
-  const user = session?.user
+  const user = session?.user;
 
   // const isAdmin = user?.email === process.env.ADMIN_EMAIL
   const isAdmin = user?.email === "tirthankarnath03@gmail.com";
@@ -25,16 +25,16 @@ const Navbar = async () => {
           <div className=" h-full flex items-center space-x-4">
             {user ? (
               <>
-        <form action={handleSignOut}>
-                <Button
-                  className={buttonVariants({
-                    size: "sm",
-                    variant: "ghost",
-                    className: "text-[1rem] p-5  font-semibold",
-                  })}
-                >
-                  Sign out
-                </Button>
+                <form action={handleSignOut}>
+                  <Button
+                    className={buttonVariants({
+                      size: "sm",
+                      variant: "ghost",
+                      className: "text-[1rem] p-5  font-semibold",
+                    })}
+                  >
+                    Sign out
+                  </Button>
                 </form>
 
                 {isAdmin ? (
@@ -63,7 +63,6 @@ const Navbar = async () => {
               </>
             ) : (
               <>
-
                 <Link
                   href="/auth/signin"
                   className={buttonVariants({

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +19,7 @@ export default function Footer() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentOutfitIndex((prevIndex) => (prevIndex + 1) % outfits.length);
-    }, 1000); // Change image every 2 seconds
+    }, 2000); // Change image every 2 seconds
 
     return () => clearInterval(timer);
   }, []);
@@ -27,7 +28,7 @@ export default function Footer() {
     <footer className="bg-gray-100 text-gray-600 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row">
-          {/* Auto-changing Girl Model */}
+          {/* Auto-changing Girl Model with CTA */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
             <div className="relative w-48 h-64 mx-auto overflow-hidden rounded-lg shadow-lg">
               <Image
@@ -37,6 +38,13 @@ export default function Footer() {
                 objectFit="cover"
                 className="transition-opacity duration-500"
               />
+              <div className="absolute inset-0 flex items-end justify-center p-4">
+                <Link href="https://app.imthe.ai" passHref>
+                  <Button className="text-primary-foreground w-full">
+                    Get Started For Free
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -52,17 +60,27 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="#" className="text-sm hover:text-gray-900">
-                    Products
+                    Pricing
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-sm hover:text-gray-900">
-                    About
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-sm hover:text-gray-900">
                     Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-gray-900">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm hover:text-gray-900">
+                    Terms & Conditions
                   </a>
                 </li>
               </ul>
@@ -93,9 +111,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-200 mt-8 pt-8 text-center">
-          <p className="text-sm">
-            &copy; 2024 Your Company Name. All rights reserved.
-          </p>
+          <p className="text-sm">&copy; 2024 Imthe.Ai. All rights reserved.</p>
         </div>
       </div>
     </footer>
