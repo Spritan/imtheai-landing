@@ -23,6 +23,7 @@ export default async function Home() {
           <AIGeneratorLanding />
         </MaxWidthWrapper>
       </section>
+
       <section>
         <MaxWidthWrapper>
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">

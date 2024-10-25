@@ -42,7 +42,7 @@ const DesignSection = () => {
               </div>
             </div>
 
-            <p className="mt-12 text-lg max-w-prose mx-auto text-gray-700">
+            <p className="mt-12 text-lg max-w-prose mx-auto text-center text-balance md:text-wrap">
               Instantly generate high-quality virtual try-ons with one click and
               experience your designs in real-time.
             </p>
