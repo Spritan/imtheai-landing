@@ -54,34 +54,40 @@ export default function Footer() {
               <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
+                  <a href="" className="text-sm hover:text-gray-900">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
+                  <a href="" className="text-sm hover:text-gray-900">
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
+                  <a href="/about" className="text-sm hover:text-gray-900">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
-                    Contact
+                  <a href="" className="text-sm hover:text-gray-900">
+                    Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
+                  <Link
+                    href="/PrivacyPolicy"
+                    className="text-sm hover:text-gray-900"
+                  >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
+                  <Link
+                    href="/TermsConditions"
+                    className="text-sm hover:text-gray-900"
+                  >
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import AIGeneratorLanding from "@/components/ai-overview";
 import PricingPage from "@/components/app_pricing_page";
 import DesignSection from "@/components/DesignSection";
+import FAQSection from "@/components/FAQ";
 import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Phone from "@/components/Phone";
@@ -229,6 +230,11 @@ export default async function Home() {
       <div>
         <PricingPage />
       </div>
+
+      <div>
+        <FAQSection />
+      </div>
+
       {/* <section>
         <MaxWidthWrapper className="py-24">
           <div className="mb-12 px-6 lg:px-8">
