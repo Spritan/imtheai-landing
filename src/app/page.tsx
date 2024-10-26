@@ -1,4 +1,4 @@
-import { auth } from "@/auth";
+// import { auth } from "@/auth";
 import AIGeneratorLanding from "@/components/ai-overview";
 import PricingPage from "@/components/app_pricing_page";
 import DesignSection from "@/components/DesignSection";
@@ -13,9 +13,9 @@ import { ArrowRight, Check, Star } from "lucide-react";
 import Link from "next/link";
 
 export default async function Home() {
-  const session = await auth();
+  // const session = await auth();
 
-  console.log({ session });
+  // console.log({ session });
 
   return (
     <div className="bg-slate-50 grainy-light">

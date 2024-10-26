@@ -38,7 +38,7 @@ export default function AboutUs() {
             Revolutionizing Fashion with AI
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-gray-600 mb-8">
-            At FashionAI, we're transforming the industry with cutting-edge
+            At ImThe.Ai, we're transforming the industry with cutting-edge
             technology. Create virtual try-ons and professional photoshoots
             without physical models or expensive setups.
           </p>
@@ -118,7 +118,7 @@ export default function AboutUs() {
           {...fadeIn}
         >
           <div className="text-center px-4">
-            <h2 className="text-3xl font-bold mb-6">Why Choose FashionAI?</h2>
+            <h2 className="text-3xl font-bold mb-6">Why Choose ImThe.Ai?</h2>
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {[
                 {
