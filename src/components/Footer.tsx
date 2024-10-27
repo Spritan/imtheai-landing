@@ -94,7 +94,13 @@ export default function Footer() {
             <div>
               <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
               <p className="text-sm">123 Main St, Anytown, USA 12345</p>
-              <p className="text-sm">Email: info@example.com</p>
+              <p className="text-sm">
+                Email:
+                <a href="mailto:info.imthe.ai@gmail.com">
+                  {" "}
+                  info.imthe.ai@gmail.com
+                </a>
+              </p>
               <p className="text-sm">Phone: (123) 456-7890</p>
             </div>
             <div>

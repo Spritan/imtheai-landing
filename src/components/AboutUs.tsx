@@ -1,25 +1,25 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight, Zap, Clock, Users } from "lucide-react";
 
 export default function AboutUs() {
-  const [selectedProduct, setSelectedProduct] = useState("tryOn");
-
   const products = {
     tryOn: {
       title: "Virtual Try-On",
       description:
-        "AI-driven virtual try-ons that let customers see how your designs look on models with different body types and skin tones.",
+        "We offer AI-driven virtual try-ons that let customers see how your designs look on models with different body types and skin tones. This technology helps shoppers make confident purchasing decisions.",
       image: "/placeholder.svg?height=300&width=400&text=Virtual+Try-On",
     },
     photoshoot: {
       title: "AI-Powered Photoshoot",
       description:
-        "Create professional images of your designs on customizable models and backgrounds, eliminating the need for traditional photoshoots.",
+        "Our virtual photoshoot service uses AI to create professional images of your designs on customizable models and backgrounds, eliminating the need for traditional photoshoots.",
       image: "/placeholder.svg?height=300&width=400&text=AI+Photoshoot",
     },
   };
@@ -31,31 +31,59 @@ export default function AboutUs() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white text-gray-800">
+    <div className="min-h-screen text-gray-800">
       <main className="container mx-auto px-4">
-        <motion.section className="py-20 text-center" {...fadeIn}>
-          <h1 className="tracking-tight text-balance mb-6 font-bold !leading-tight text-gray-900 text-5xl">
-            Revolutionizing Fashion with AI
-          </h1>
-          <p className="max-w-3xl mx-auto text-xl text-gray-600 mb-8">
-            At ImThe.Ai, we're transforming the industry with cutting-edge
-            technology. Create virtual try-ons and professional photoshoots
-            without physical models or expensive setups.
-          </p>
-          <Button className="background: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%); text-white text-lg py-6 px-8 rounded-full hover:shadow-lg transition-shadow duration-300">
-            Elevate Your Brand Now <ChevronRight className="ml-2" />
-          </Button>
+        <motion.section className="py-8" {...fadeIn}>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="tracking-tight text-balance mb-6 font-bold !leading-tight text-gray-900 text-5xl">
+                Who We Are
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                At ImThe.Ai, we are transforming the fashion industry with
+                cutting-edge AI technology. Our platform allows fashion brands
+                to create virtual try-ons and professional photoshoots without
+                the need for physical models or expensive setups. We make it
+                simple to showcase your designs online, giving customers a
+                personalized, interactive experience.
+              </p>
+              <Link href="https://app.imthe.ai" passHref>
+                <Button className="bg-gradient-to-r from-gray-700 to-gray-900 text-white text-lg py-6 px-8 rounded-full hover:shadow-lg transition-shadow duration-300">
+                  Try the Demo Now <ChevronRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
+            <div className="relative">
+              <Image
+                src="/Who we r.png"
+                alt="AI Fashion Showcase"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
         </motion.section>
 
         <motion.section className="py-16" {...fadeIn}>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="order-2 md:order-1">
+              <Image
+                src="/Our Mission.png"
+                alt="AI Fashion Showcase"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+            <div className="order-1 md:order-2">
               <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
-                We empower fashion brands with AI solutions that simplify and
-                elevate their digital presence. From virtual fittings to
-                high-quality AI-generated photoshoots, we're making fashion more
-                accessible, interactive, and engaging for everyone.
+                We aim to empower fashion brands by offering AI solutions that
+                simplify and elevate their digital presence. From virtual
+                fittings to high-quality AI-generated photoshoots, we strive to
+                make fashion more accessible, interactive, and engaging for
+                everyone.
               </p>
               <ul className="space-y-4">
                 {[
@@ -70,20 +98,17 @@ export default function AboutUs() {
                 ))}
               </ul>
             </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=500&text=AI+Fashion+Showcase"
-                alt="AI Fashion Showcase"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl">
-                <p className="text-gray-600 font-bold">100+ Brands</p>
-                <p className="text-sm text-gray-600">Trust Our Technology</p>
-              </div>
-            </div>
           </div>
+        </motion.section>
+
+        <motion.section className="py-16" {...fadeIn}>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Vision</h2>
+          <p className="max-w-3xl mx-auto text-xl text-gray-600 mb-8 text-center">
+            Our vision is to lead the way in making the fashion industry more
+            digital, personalized, and efficient. With our AI-powered tools, we
+            want to create a future where every brand can offer realistic
+            try-ons and stunning photos with minimal effort.
+          </p>
         </motion.section>
 
         <motion.section className="py-16" {...fadeIn}>
@@ -92,8 +117,7 @@ export default function AboutUs() {
             {Object.entries(products).map(([key, product]) => (
               <Card
                 key={key}
-                className="overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105"
-                onClick={() => setSelectedProduct(key)}
+                className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105"
               >
                 <Image
                   src={product.image}
@@ -148,15 +172,17 @@ export default function AboutUs() {
             Ready to Elevate Your Fashion Brand?
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-8">
-            Experience the future of fashion technology. Try our demo and see
-            how our AI can transform your brand's digital presence.
+            Start using our AI tools today! Try the demo to see how our
+            technology can work for you.
           </p>
-          <Button
-            size="lg"
-            className="background: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%); text-white text-lg py-6 px-8 rounded-full hover:shadow-lg transition-shadow duration-300"
-          >
-            Start Your Free Trial
-          </Button>
+          <Link href="https://app.imthe.ai" passHref>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-gray-700 to-gray-900 text-white text-lg py-6 px-8 rounded-full hover:shadow-lg transition-shadow duration-300"
+            >
+              Try the Demo Now
+            </Button>
+          </Link>
         </motion.section>
       </main>
     </div>
