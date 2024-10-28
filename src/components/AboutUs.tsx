@@ -32,7 +32,7 @@ export default function AboutUs() {
 
   return (
     <div className="min-h-screen text-gray-800">
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto lg:w-3/5">
         <motion.section className="py-8" {...fadeIn}>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
