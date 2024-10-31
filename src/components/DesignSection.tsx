@@ -42,7 +42,7 @@ const DesignSection = () => {
               </div>
             </div>
 
-            <p className="mt-12 text-lg max-w-prose mx-auto text-gray-700">
+            <p className="mt-12 text-lg max-w-prose mx-auto text-center text-balance md:text-wrap">
               Instantly generate high-quality virtual try-ons with one click and
               experience your designs in real-time.
             </p>
@@ -55,7 +55,7 @@ const DesignSection = () => {
               })}
               href="https://app.imthe.ai"
             >
-              Try Demo <ArrowRight className="h-4 w-4 ml-1.5" />
+              Get Started For Free <ArrowRight className="h-4 w-4 ml-1.5" />
             </Link>
           </div>
         </section>

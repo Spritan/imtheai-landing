@@ -4,19 +4,17 @@
  * When the form is submitted, the `signIn` function is called with the 'resend' strategy to send a new sign-in link to the user's email.
  */
 
-import { signIn } from '@/auth'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-
+import { signIn } from "@/auth";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export function SignInResend() {
-
   return (
     <form
       className="flex flex-col items-center gap-4"
       action={async (formData) => {
-        'use server'
-        await signIn('resend', formData)
+        "use server";
+        await signIn("resend", formData);
       }}
     >
       <Input
@@ -29,5 +27,5 @@ export function SignInResend() {
         Login
       </Button>
     </form>
-  )
+  );
 }

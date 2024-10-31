@@ -21,10 +21,10 @@ export const formatPrice = (price: number) => {
 
 
 export function constructMetadata({
-  title = 'CaseCobra - custom high-quality phone cases',
+  title = 'ImThe.Ai - Generate Your Images',
   description = 'Create custom high-quality phone cases in seconds',
   image = '/thumbnail.png',
-  icons = '/favicon.ico',
+  icons = '/hero-background (8).jpg',
 }: {
   title?: string
   description?: string

@@ -54,7 +54,7 @@ export default function AIGeneratorLanding() {
               })}
               href="https://app.imthe.ai"
             >
-              Try Demo <ArrowRight className="h-4 w-4 ml-1.5" />
+              Get Started For Free <ArrowRight className="h-4 w-4 ml-1.5" />
             </Link>
           </div>
           {/* <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">

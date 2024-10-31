@@ -1,7 +1,8 @@
-import { auth } from "@/auth";
+// import { auth } from "@/auth";
 import AIGeneratorLanding from "@/components/ai-overview";
 import PricingPage from "@/components/app_pricing_page";
 import DesignSection from "@/components/DesignSection";
+import FAQSection from "@/components/FAQ";
 import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Phone from "@/components/Phone";
@@ -12,9 +13,9 @@ import { ArrowRight, Check, Star } from "lucide-react";
 import Link from "next/link";
 
 export default async function Home() {
-  const session = await auth();
+  // const session = await auth();
 
-  console.log({ session });
+  // console.log({ session });
 
   return (
     <div className="bg-slate-50 grainy-light">
@@ -23,12 +24,12 @@ export default async function Home() {
           <AIGeneratorLanding />
         </MaxWidthWrapper>
       </section>
+
       <section>
         <MaxWidthWrapper>
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
-                {/* i forgot this div right here in the video, it's purely visual gradient and looks nice */}
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t via-slate-50/50 from-slate-50 h-28" />
                 {/* <img src="/snake-1.png" className="w-full" /> */}
               </div>
@@ -228,6 +229,11 @@ export default async function Home() {
       <div>
         <PricingPage />
       </div>
+
+      <div>
+        <FAQSection />
+      </div>
+
       {/* <section>
         <MaxWidthWrapper className="py-24">
           <div className="mb-12 px-6 lg:px-8">

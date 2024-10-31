@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +19,7 @@ export default function Footer() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentOutfitIndex((prevIndex) => (prevIndex + 1) % outfits.length);
-    }, 1000); // Change image every 2 seconds
+    }, 2000); // Change image every 2 seconds
 
     return () => clearInterval(timer);
   }, []);
@@ -27,7 +28,7 @@ export default function Footer() {
     <footer className="bg-gray-100 text-gray-600 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row">
-          {/* Auto-changing Girl Model */}
+          {/* Auto-changing Girl Model with CTA */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
             <div className="relative w-48 h-64 mx-auto overflow-hidden rounded-lg shadow-lg">
               <Image
@@ -37,6 +38,13 @@ export default function Footer() {
                 objectFit="cover"
                 className="transition-opacity duration-500"
               />
+              <div className="absolute inset-0 flex items-end justify-center p-4">
+                <Link href="https://app.imthe.ai" passHref>
+                  <Button className="text-primary-foreground w-full">
+                    Get Started For Free
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -46,31 +54,53 @@ export default function Footer() {
               <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
+                  <a href="" className="text-sm hover:text-gray-900">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
-                    Products
+                  <a href="" className="text-sm hover:text-gray-900">
+                    Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
-                    About
+                  <a href="/about" className="text-sm hover:text-gray-900">
+                    About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm hover:text-gray-900">
-                    Contact
+                  <a href="" className="text-sm hover:text-gray-900">
+                    Contact Us
                   </a>
+                </li>
+                <li>
+                  <Link
+                    href="/PrivacyPolicy"
+                    className="text-sm hover:text-gray-900"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/TermsConditions"
+                    className="text-sm hover:text-gray-900"
+                  >
+                    Terms & Conditions
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
               <p className="text-sm">123 Main St, Anytown, USA 12345</p>
-              <p className="text-sm">Email: info@example.com</p>
+              <p className="text-sm">
+                Email:
+                <a href="mailto:info.imthe.ai@gmail.com">
+                  {" "}
+                  info.imthe.ai@gmail.com
+                </a>
+              </p>
               <p className="text-sm">Phone: (123) 456-7890</p>
             </div>
             <div>
@@ -93,9 +123,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-200 mt-8 pt-8 text-center">
-          <p className="text-sm">
-            &copy; 2024 Your Company Name. All rights reserved.
-          </p>
+          <p className="text-sm">&copy; 2024 Imthe.Ai. All rights reserved.</p>
         </div>
       </div>
     </footer>

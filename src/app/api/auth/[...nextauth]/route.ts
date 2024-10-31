@@ -1,3 +1,2 @@
-import { handlers } from "@/auth";
-
-export const { GET, POST } = handlers;
+import {handleAuth} from "@kinde-oss/kinde-auth-nextjs/server";
+export const GET = handleAuth();
