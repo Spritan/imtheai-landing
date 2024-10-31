@@ -14,13 +14,13 @@ export default function AboutUs() {
       title: "Virtual Try-On",
       description:
         "We offer AI-driven virtual try-ons that let customers see how your designs look on models with different body types and skin tones. This technology helps shoppers make confident purchasing decisions.",
-      image: "/placeholder.svg?height=300&width=400&text=Virtual+Try-On",
+      image: "/virtual.png",
     },
     photoshoot: {
       title: "AI-Powered Photoshoot",
       description:
         "Our virtual photoshoot service uses AI to create professional images of your designs on customizable models and backgrounds, eliminating the need for traditional photoshoots.",
-      image: "/placeholder.svg?height=300&width=400&text=AI+Photoshoot",
+      image: "/photoshot.png",
     },
   };
 
@@ -77,8 +77,10 @@ export default function AboutUs() {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <h1 className="tracking-tight text-balance mb-4 font-bold !leading-tight text-gray-900 text-5xl">
+                Our Mission
+              </h1>
+              <p className="text-xl text-gray-600 mb-6">
                 We aim to empower fashion brands by offering AI solutions that
                 simplify and elevate their digital presence. From virtual
                 fittings to high-quality AI-generated photoshoots, we strive to
@@ -102,7 +104,9 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section className="py-16" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-center mb-12">Our Vision</h2>
+          <h1 className="tracking-tight text-balance text-center mb-12 font-bold !leading-tight text-gray-900 text-5xl">
+            Our Vision
+          </h1>
           <p className="max-w-3xl mx-auto text-xl text-gray-600 mb-8 text-center">
             Our vision is to lead the way in making the fashion industry more
             digital, personalized, and efficient. With our AI-powered tools, we
@@ -112,7 +116,9 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section className="py-16" {...fadeIn}>
-          <h2 className="text-3xl font-bold text-center mb-12">Our Products</h2>
+          <h1 className="tracking-tight text-balance text-center mb-12 font-bold !leading-tight text-gray-900 text-5xl">
+            Our Products
+          </h1>
           <div className="grid md:grid-cols-2 gap-8">
             {Object.entries(products).map(([key, product]) => (
               <Card
@@ -124,7 +130,7 @@ export default function AboutUs() {
                   alt={product.title}
                   width={400}
                   height={300}
-                  className="w-full object-cover h-48"
+                  className="w-full object-cover pt-5"
                 />
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-semibold mb-2">
@@ -168,9 +174,9 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section className="py-20 text-center" {...fadeIn}>
-          <h2 className="text-4xl font-bold mb-6">
+          <h1 className="tracking-tight text-balance mb-6 font-bold !leading-tight text-gray-900 text-5xl">
             Ready to Elevate Your Fashion Brand?
-          </h2>
+          </h1>
           <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-8">
             Start using our AI tools today! Try the demo to see how our
             technology can work for you.

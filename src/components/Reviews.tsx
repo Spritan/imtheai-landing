@@ -103,7 +103,7 @@ function Review({ imgSrc, className, ...props }: ReviewProps) {
   return (
     <div
       className={cn(
-        "animate-fade-in rounded-[2.25rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5",
+        "animate-fade-in rounded-[1rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5",
         className
       )}
       style={{ animationDelay }}
@@ -117,12 +117,12 @@ function Review({ imgSrc, className, ...props }: ReviewProps) {
 export function Reviews() {
   return (
     <MaxWidthWrapper className="relative max-w-5xl">
-      <img
+      {/* <img
         alt=""
         aria-hidden="true"
         src="/what-people-are-buying.png"
         className="absolute select-none hidden xl:block -left-32 top-1/3"
-      />
+      /> */}
 
       <ReviewGrid />
     </MaxWidthWrapper>

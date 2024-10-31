@@ -7,10 +7,10 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const outfits = [
-  "/model/model-1.png",
-  "/model/model-2.png",
-  "/model/model-3.jpeg",
-  "/model/model-4.jpeg",
+  "/model/model-a.png",
+  "/model/model-b.png",
+  "/model/model-c.png",
+  "/model/model-d.png",
 ];
 
 export default function Footer() {
@@ -59,9 +59,9 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="" className="text-sm hover:text-gray-900">
+                  <Link href="#pricing" className="text-sm hover:text-gray-900">
                     Pricing
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/about" className="text-sm hover:text-gray-900">
@@ -69,7 +69,10 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="" className="text-sm hover:text-gray-900">
+                  <a
+                    href="#tally-open=w7vAoZ&tally-layout=modal&tally-emoji-animation=wave"
+                    className="text-sm hover:text-gray-900"
+                  >
                     Contact Us
                   </a>
                 </li>
@@ -93,7 +96,7 @@ export default function Footer() {
             </div>
             <div>
               <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
-              <p className="text-sm">123 Main St, Anytown, USA 12345</p>
+              <p className="text-sm">Guwahati, Assam, INDIA</p>
               <p className="text-sm">
                 Email:
                 <a href="mailto:info.imthe.ai@gmail.com">
@@ -101,7 +104,7 @@ export default function Footer() {
                   info.imthe.ai@gmail.com
                 </a>
               </p>
-              <p className="text-sm">Phone: (123) 456-7890</p>
+              <p className="text-sm">Phone: +916002920374</p>
             </div>
             <div>
               <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
@@ -112,12 +115,22 @@ export default function Footer() {
                 <Button variant="ghost" size="icon" aria-label="Twitter">
                   <Twitter className="h-5 w-5" />
                 </Button>
-                <Button variant="ghost" size="icon" aria-label="Instagram">
-                  <Instagram className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
-                </Button>
+                <Link
+                  href="https://www.instagram.com/_imthe.ai?igsh=MXEwZHZjM2Q5YXpxaQ=="
+                  passHref
+                >
+                  <Button variant="ghost" size="icon" aria-label="Instagram">
+                    <Instagram className="h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/i-m-the-ai/"
+                  passHref
+                >
+                  <Button variant="ghost" size="icon" aria-label="LinkedIn">
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
