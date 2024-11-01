@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const outfits = [
@@ -129,6 +129,11 @@ export default function Footer() {
                 >
                   <Button variant="ghost" size="icon" aria-label="LinkedIn">
                     <Linkedin className="h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="https://www.youtube.com/@imthe-ai" passHref>
+                  <Button variant="ghost" size="icon" aria-label="Youtube">
+                    <Youtube className="h-5 w-5" />
                   </Button>
                 </Link>
               </div>
