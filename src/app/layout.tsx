@@ -9,6 +9,8 @@ import Providers from "@/components/Providers";
 import { SessionProvider } from "next-auth/react";
 import { constructMetadata } from "@/lib/utils";
 
+import { CSPostHogProvider } from './providers'
+
 const recursive = Recursive({ subsets: ["latin"] });
 
 // Construct metadata for the page
@@ -21,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <CSPostHogProvider>
       <head>
         {/* Including the Tally script here */}
         <script async src="https://tally.so/widgets/embed.js"></script>
@@ -37,6 +40,7 @@ export default function RootLayout({
         </main>
         <Toaster />
       </body>
+      </CSPostHogProvider>
     </html>
   );
 }
