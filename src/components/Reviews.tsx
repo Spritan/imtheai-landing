@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 import Phone from "./Phone";
 
 const PHONES = [
-  "/testimonials/1.jpg",
-  "/testimonials/2.jpg",
-  "/testimonials/3.jpg",
-  "/testimonials/4.jpg",
-  "/testimonials/5.jpg",
-  "/testimonials/6.jpg",
+  "/testimonials/1.png",
+  "/testimonials/2.png",
+  "/testimonials/3.png",
+  "/testimonials/4.png",
+  "/testimonials/5.png",
+  "/testimonials/6.png",
 ];
 
 function splitArray<T>(array: Array<T>, numParts: number) {
@@ -103,7 +103,7 @@ function Review({ imgSrc, className, ...props }: ReviewProps) {
   return (
     <div
       className={cn(
-        "animate-fade-in rounded-[2.25rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5",
+        "animate-fade-in rounded-[1rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5",
         className
       )}
       style={{ animationDelay }}
@@ -117,12 +117,12 @@ function Review({ imgSrc, className, ...props }: ReviewProps) {
 export function Reviews() {
   return (
     <MaxWidthWrapper className="relative max-w-5xl">
-      <img
+      {/* <img
         alt=""
         aria-hidden="true"
         src="/what-people-are-buying.png"
         className="absolute select-none hidden xl:block -left-32 top-1/3"
-      />
+      /> */}
 
       <ReviewGrid />
     </MaxWidthWrapper>

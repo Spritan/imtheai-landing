@@ -8,29 +8,29 @@ import {
 export default function FAQSection() {
   const faqs = [
     {
-      question: "What is your return policy?",
+      question: "How does the virtual try-on feature work?",
       answer:
-        "We offer a 30-day return policy for all unused items in their original packaging. Please contact our customer service team to initiate a return.",
+        "Our AI-powered virtual try-on allows users to see how clothing will look on various body shapes and skin tones. Simply upload your product images, and our AI generates realistic try-on visuals.",
     },
     {
-      question: "How long does shipping take?",
+      question: "What is the virtual photoshoot service?",
       answer:
-        "Shipping times vary depending on your location. Typically, domestic orders are delivered within 3-5 business days, while international orders may take 7-14 business days.",
+        "The virtual photoshoot service provides high-quality, lifelike images of your clothing items without a physical shoot. You can choose models, lighting, and backgrounds to create custom images.",
     },
     {
-      question: "Do you offer international shipping?",
+      question: "Can I use these images on my e-commerce platform?",
       answer:
-        "Yes, we ship to most countries worldwide. Shipping costs and delivery times may vary depending on the destination.",
+        "Absolutely! Our high-quality images are optimized for e-commerce, social media, and marketing campaigns.",
     },
     {
-      question: "How can I track my order?",
+      question: "Can I adjust the model poses and expressions?",
       answer:
-        "Once your order has been shipped, you will receive a confirmation email with a tracking number. You can use this number to track your package on our website or the carrier's site.",
+        "Yes, our virtual photoshoot feature allows flexibility in poses, so you can customize looks to fit your brand style.",
     },
     {
-      question: "What payment methods do you accept?",
+      question: "How customizable are the models and backgrounds?",
       answer:
-        "We accept major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay for all online purchases.",
+        "You can choose models of different races, body shapes, and skin tones, and also adjust lighting and backgrounds to match your brand’s style.",
     },
   ];
 
