@@ -8,17 +8,23 @@ import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/Providers";
 import { SessionProvider } from "next-auth/react";
 import { constructMetadata } from "@/lib/utils";
+
 const recursive = Recursive({ subsets: ["latin"] });
 
-export const metadata = constructMetadata();
+// Construct metadata for the page
+export const metadata: Metadata = constructMetadata();
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
+      <head>
+        {/* Including the Tally script here */}
+        <script async src="https://tally.so/widgets/embed.js"></script>
+      </head>
       <body className={recursive.className}>
         <Navbar />
         <main className="flex grainy-light flex-col min-h-[calc(100vh-3.5rem-1px)]">
