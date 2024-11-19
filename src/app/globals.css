@@ -95,7 +95,6 @@
   animation: clothes-change 12s steps(1) infinite;
 }
 
-/* Add this to your global CSS file */
 html {
   scroll-behavior: smooth;
 }

@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="sticky z-[100] h-20 inset-x-0 top-0 bg-white/75 w-full border-b border-gray-200 backdrop-blur">
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between border-b border-zinc-200">
-          <Link href="/" className="flex z-40 text-xl font-semibold">
+          <Link href="/#Home" className="flex z-40 text-xl font-semibold">
             <img src="/LogoXX.png" alt="" className="w-[150px]" />
           </Link>
 
