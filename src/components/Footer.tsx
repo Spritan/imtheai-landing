@@ -39,9 +39,9 @@ export default function Footer() {
                 className="transition-opacity duration-500"
               />
               <div className="absolute inset-0 flex items-end justify-center p-4">
-                <Link href="https://app.imthe.ai" passHref>
+                <Link href="https://www.fiverr.com/imthe_ai/do-realistic-ai-photoshoots-create-ai-models-for-your-fashion-clothing-brand" passHref>
                   <Button className="text-primary-foreground w-full">
-                    Get Started For Free
+                    Connect us on fiverr
                   </Button>
                 </Link>
               </div>
@@ -58,14 +58,14 @@ export default function Footer() {
                     Home
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/#pricing"
                     className="text-sm hover:text-gray-900"
                   >
                     Pricing
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <a href="/about" className="text-sm hover:text-gray-900">
                     About Us

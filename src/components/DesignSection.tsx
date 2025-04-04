@@ -53,9 +53,9 @@ const DesignSection = () => {
                 size: "lg",
                 className: "mx-auto mt-8",
               })}
-              href="https://app.imthe.ai"
+              href="https://www.fiverr.com/imthe_ai/do-realistic-ai-photoshoots-create-ai-models-for-your-fashion-clothing-brand"
             >
-              Get Started For Free <ArrowRight className="h-4 w-4 ml-1.5" />
+              Connect us on fiverr <ArrowRight className="h-4 w-4 ml-1.5" />
             </Link>
           </div>
         </section>

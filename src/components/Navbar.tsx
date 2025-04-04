@@ -31,7 +31,12 @@ const Navbar = () => {
             >
               About
             </Link>
-
+            <Link
+              href="/blog"
+              className={buttonVariants({ size: "sm", variant: "ghost" })}
+            >
+              Blog
+            </Link>
             {/* Contact Us Button with Tally Modal */}
             <button
               className={buttonVariants({
@@ -49,13 +54,13 @@ const Navbar = () => {
 
             {/* Get Started Link */}
             <Link
-              href="https://app.imthe.ai"
+              href="https://www.fiverr.com/imthe_ai/do-realistic-ai-photoshoots-create-ai-models-for-your-fashion-clothing-brand"
               className={buttonVariants({
                 size: "sm",
                 className: "hidden text-[1rem] sm:flex items-center gap-1",
               })}
             >
-              Get Started For Free
+              Connect us on fiverr
               <ArrowRight className="ml-1.5 h-5 w-5" />
             </Link>
           </div>
