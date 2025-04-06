@@ -15,7 +15,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sticky z-[100] h-20 inset-x-0 top-0 bg-white/75 w-full border-b border-gray-200 backdrop-blur">
+    <nav className="sticky z-[9999] h-20 inset-x-0 top-0 bg-white/75 w-full border-b border-gray-200 backdrop-blur">
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between border-b border-zinc-200">
           <Link href="/#Home" className="flex z-40 text-xl font-semibold">
