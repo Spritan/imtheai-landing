@@ -53,9 +53,19 @@ const DesignSection = () => {
                 size: "lg",
                 className: "mx-auto mt-8",
               })}
-              href="https://app.imthe.ai"
+              href="https://www.fiverr.com/imthe_ai/do-realistic-ai-photoshoots-create-ai-models-for-your-fashion-clothing-brand"
             >
-              Get Started For Free <ArrowRight className="h-4 w-4 ml-1.5" />
+              <div className="flex items-center gap-1"> {/* Added gap between text and image */}
+                              <span className="align-baseline">Connect us on</span>
+                              <Image
+                                src="/fiverr_transparent.png"
+                                alt="Fiverr"
+                                width={50}
+                                height={10}
+                                className="mb-0.5" // Slight adjustment to align with text baseline
+                              />
+                            </div>
+              <ArrowRight className="h-4 w-4 ml-1.5" />
             </Link>
           </div>
         </section>

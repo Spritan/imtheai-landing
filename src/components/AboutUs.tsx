@@ -47,9 +47,19 @@ export default function AboutUs() {
                 simple to showcase your designs online, giving customers a
                 personalized, interactive experience.
               </p>
-              <Link href="https://app.imthe.ai" passHref>
+              <Link href="https://www.fiverr.com/imthe_ai/do-realistic-ai-photoshoots-create-ai-models-for-your-fashion-clothing-brand" passHref>
                 <Button className="bg-gradient-to-r from-gray-700 to-gray-900 text-white text-lg py-6 px-8 rounded-full hover:shadow-lg transition-shadow duration-300">
-                  Try the Demo Now <ChevronRight className="ml-2" />
+                  <div className="flex items-center gap-1"> {/* Added gap between text and image */}
+                    <span className="align-baseline">Connect us on</span>
+                    <Image
+                      src="/fiverr_transparent.png"
+                      alt="Fiverr"
+                      width={70}
+                      height={10}
+                      className="mb-0.5" // Slight adjustment to align with text baseline
+                    />
+                  </div>
+                <ChevronRight className="ml-2" />
                 </Button>
               </Link>
             </div>
@@ -181,12 +191,21 @@ export default function AboutUs() {
             Start using our AI tools today! Try the demo to see how our
             technology can work for you.
           </p>
-          <Link href="https://app.imthe.ai" passHref>
+          <Link href="https://www.fiverr.com/imthe_ai/do-realistic-ai-photoshoots-create-ai-models-for-your-fashion-clothing-brand" passHref>
             <Button
               size="lg"
               className="bg-gradient-to-r from-gray-700 to-gray-900 text-white text-lg py-6 px-8 rounded-full hover:shadow-lg transition-shadow duration-300"
             >
-              Try the Demo Now
+              <div className="flex items-center gap-1"> {/* Added gap between text and image */}
+                    <span className="align-baseline">Connect us on</span>
+                    <Image
+                      src="/fiverr_transparent.png"
+                      alt="Fiverr"
+                      width={70}
+                      height={10}
+                      className="mb-0.5" // Slight adjustment to align with text baseline
+                    />
+                  </div>
             </Button>
           </Link>
         </motion.section>
