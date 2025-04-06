@@ -5,7 +5,7 @@ export type BlogPost = Database['public']['Tables']['blog_posts']['Row'];
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
   try {
-    console.log('Fetching blog posts from Supabase...');
+    // console.log('Fetching blog posts from Supabase...');
     
     // Use fetch directly with Supabase REST API
     const response = await fetch(
@@ -30,10 +30,10 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       return [];
     }
 
-    console.log('Successfully fetched blog posts:', {
-      count: data.length,
-      posts: data
-    });
+    // console.log('Successfully fetched blog posts:', {
+    //   count: data.length,
+    //   posts: data
+    // });
 
     return data;
   } catch (error) {

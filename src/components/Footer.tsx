@@ -40,9 +40,17 @@ export default function Footer() {
               />
               <div className="absolute inset-0 flex items-end justify-center p-4">
                 <Link href="https://www.fiverr.com/imthe_ai/do-realistic-ai-photoshoots-create-ai-models-for-your-fashion-clothing-brand" passHref>
-                  <Button className="text-primary-foreground w-full">
-                    Connect us on fiverr
+                  <Button className="text-primary-foreground w-auto px-4 py-2 flex items-center gap-1"> 
+                    <span className="align-baseline">Connect us on</span>
+                    <Image
+                      src="/fiverr_transparent.png"
+                      alt="Fiverr"
+                      width={45} // Adjusted size to prevent overflow
+                      height={8}
+                      className="mb-0.5 object-contain"
+                    />
                   </Button>
+
                 </Link>
               </div>
             </div>

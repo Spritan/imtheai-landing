@@ -7,12 +7,12 @@ export const revalidate = 3600;
 
 export default async function Home() {
   try {
-    console.log('Home page: Fetching blog posts...');
+    // console.log('Home page: Fetching blog posts...');
     const posts = await getBlogPosts();
-    console.log('Home page: Received posts:', {
-      count: posts.length,
-      postIds: posts.map(post => post.id)
-    });
+    // console.log('Home page: Received posts:', {
+    //   count: posts.length,
+    //   postIds: posts.map(post => post.id)
+    // });
 
     // Handle case when no posts are available
     if (posts.length === 0) {
@@ -21,7 +21,7 @@ export default async function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="relative">
               <div className="absolute inset-0 blur-3xl opacity-30 dark:opacity-20">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full transform rotate-12 scale-y-50"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full transform rotate-12 scale-y-50"></div> */}
               </div>
               <h1 className="relative text-4xl md:text-5xl font-serif font-bold text-center mb-4 text-slate-900 dark:text-slate-100">
                 Fashion Blog
@@ -38,22 +38,22 @@ export default async function Home() {
     return (
       <main className="min-h-screen bg-slate-50 dark:bg-slate-950 relative">
         {/* Floating back button with glowing effect */}
-        <Link
+        {/* <Link
           href="/"
           className="fixed top-20 left-2 md:top-24 md:left-10 p-4 w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 shadow-lg shadow-blue-500/50 transition-all z-50"
           >
           <span className="text-black text-2xl">&larr;</span>
-        </Link>
+        </Link> */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="relative">
             <div className="absolute inset-0 blur-3xl opacity-30 dark:opacity-20">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full transform rotate-12 scale-y-50"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full transform rotate-12 scale-y-50"></div> */}
             </div>
             <h1 className="relative text-4xl md:text-5xl font-serif font-bold text-center mb-4 text-slate-900 dark:text-slate-100">
-              Fashion Blog
+               Blogs
             </h1>
             <p className="relative text-center text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto text-lg">
-              "Unleash your style with the latest trends, timeless classics, and bold fashion statements!" ✨👗
+              {/* "Unleash your style with the latest trends, timeless classics, and bold fashion statements!" ✨👗 */}
             </p>
           </div>
           <BlogList posts={posts} />

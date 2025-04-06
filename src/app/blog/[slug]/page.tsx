@@ -1,8 +1,10 @@
+// app/blog/[slug]/page.tsx
 import { getBlogPosts } from '@/lib/blog-data';
 import BlogPost from '@/components/BlogPost';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
+// Revalidate every hour
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
@@ -12,13 +14,46 @@ export async function generateStaticParams() {
   }));
 }
 
-// Dynamically set the page metadata (including the <title>) based on the blog post
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const decodedSlug = decodeURIComponent(params.slug);
   const posts = await getBlogPosts();
   const post = posts.find((p) => p.slug === decodedSlug);
+
+  // Fallback metadata if post is not found
+  if (!post) {
+    return {
+      title: 'Blog Post',
+      description: 'Blog Post not found',
+    };
+  }
+
+  // Use the same fallback mechanism for site URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001';
+  const postUrl = `${siteUrl}/blog/${post.slug}`;
+
   return {
-    title: post?.title || 'Blog Post',
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: postUrl,
+      images: [
+        {
+          url: post.image_url,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image_url],
+    },
   };
 }
 
@@ -38,13 +73,12 @@ export default async function BlogPostPage({
 
     return (
       <div className="relative">
-        {/* Floating back button with glowing effect */}
-        <Link
-          href="/blog"
-          className="absolute top-6 left-6 md:top-10 md:left-10 p-6 w-10 h-10 flex items-center justify-center rounded-full bg-white-900 hover:bg-gray-200 shadow-lg shadow-blue-500/50 transition-all"
+        {/* <Link
+          href="/"
+          className="absolute top-6 left-6 md:top-10 md:left-10 p-6 w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 shadow-lg shadow-blue-500/50 transition-all"
         >
           <span className="text-black text-2xl">&larr;</span>
-        </Link>
+        </Link> */}
         <BlogPost post={post} />
       </div>
     );

@@ -29,6 +29,7 @@ export default function ViewCounter({ blogId, initialViews }: ViewCounterProps) 
           throw new Error('Network response was not ok');
         }
         const data = await res.json();
+        console.log("View increment response:", data);
         setViews(data.views);
       } catch (err) {
         console.error('Error incrementing views:', err);
