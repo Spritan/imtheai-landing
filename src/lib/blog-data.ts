@@ -15,7 +15,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
           'apikey': process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
           'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
         },
-        cache: 'no-store',
+        next: { revalidate: 3600 }, // Revalidate every hour
       }
     );
 
