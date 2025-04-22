@@ -1,7 +1,7 @@
 'use client';
 
 import type { BlogPost } from '@/lib/blog-data';
-import { Calendar, Clock, Share2 } from 'lucide-react';
+import { Calendar, Clock, Share2, X } from 'lucide-react';
 import { format } from 'date-fns';
 import { useState, useCallback } from 'react';
 import Image from 'next/image';
@@ -14,39 +14,71 @@ interface BlogPostProps {
 }
 
 function ContentWithImages({ content }: { content: string }) {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const parts = content.split(/!\[.*?\]\((.*?)\)/g);
 
   return (
-    <div className="prose dark:prose-invert max-w-none">
-      {parts.map((part, index) => {
-        if (index % 2 === 1) {
-          return (
-            <figure
-              key={index}
-              className="my-12 mx-auto relative h-96 w-full md:w-[80%]"
+    <>
+      <div className="prose dark:prose-invert max-w-none">
+        {parts.map((part, index) => {
+          if (index % 2 === 1) {
+            const imageUrl = part.trim();
+            return (
+              <figure
+                key={index}
+                className="my-12 mx-auto w-full md:w-[80%] cursor-zoom-in"
+                onClick={() => setSelectedImage(imageUrl)}
+              >
+                <Image
+                  src={imageUrl}
+                  alt="Blog content"
+                  className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                  loading="lazy"
+                />
+              </figure>
+            );
+          }
+          return part.split('\n\n').map((paragraph, pIndex) => (
+            paragraph.trim() && (
+              <p
+                key={`${index}-${pIndex}`}
+                className="text-lg leading-relaxed mb-6 text-slate-700 dark:text-slate-300"
+              >
+                {paragraph}
+              </p>
+            )
+          ));
+        })}
+      </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl w-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-2 text-white z-10"
             >
-              <Image
-                src={part.trim()}
-                alt="Blog content"
-                fill
-                className="object-cover rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
-                loading="lazy"
-              />
-            </figure>
-          );
-        }
-        return part.split('\n\n').map((paragraph, pIndex) => (
-          paragraph.trim() && (
-            <p
-              key={`${index}-${pIndex}`}
-              className="text-lg leading-relaxed mb-6 text-slate-700 dark:text-slate-300"
-            >
-              {paragraph}
-            </p>
-          )
-        ));
-      })}
-    </div>
+              <X className="w-6 h-6" />
+            </button>
+            <Image
+              src={selectedImage}
+              alt="Full view"
+              className="w-full h-auto rounded-lg"
+              width={1200}
+              height={800}
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -86,17 +118,14 @@ export default function BlogPost({ post }: BlogPostProps) {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12 bg-white">
       <div className="relative">
-        {/* Removed the bluish background hue */}
         <h1 className="relative text-4xl md:text-5xl font-serif font-bold text-center mb-4 text-slate-900">
           {post.title}
         </h1>
       </div>
 
       <div className="w-full mb-4">
-        {/* Top Line */}
         <div className="border-t border-slate-300 opacity-50"></div>
 
-        {/* Metadata + Share Button */}
         <div className="flex flex-wrap items-center justify-between text-sm text-slate-600 py-2 gap-2 sm:gap-4">
           <div className="flex flex-wrap items-center gap-2 sm:gap-4">
             <div className="flex items-center gap-1.5">
@@ -117,7 +146,6 @@ export default function BlogPost({ post }: BlogPostProps) {
           </Button>
         </div>
 
-        {/* Bottom Line */}
         <div className="border-t border-slate-300 opacity-50"></div>
       </div>
 
